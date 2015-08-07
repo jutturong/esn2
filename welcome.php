@@ -39,25 +39,7 @@ class Welcome extends CI_Controller {
               //  $this->load->view('js_login',$data);
 	}
         
-        public function  sys_login() //สร้างขึ้นมาเพื่อ check การ login
-        {
-           //echo  $this->session->userdata('sess_username');
-            /*
-                    'sess_username'=>$us,
-                    'sess_lastname'=>$UserSurname,
-                    'sess_usertype'=>$UserType,
-                    'sess_usercode'=>$UserCode,
-                    'sess_login'=>'Y'
-            */
-            
-           
-            
-           
-            $this->log_login();
-            
-            $this->user_model->checklogin($sess_login);
-            
-        }
+ 
         
         public   function  log_login() #log file รายละเอียดสำหรับการ login
         {
@@ -71,6 +53,7 @@ class Welcome extends CI_Controller {
             echo  $sess_usercode=$this->session->userdata('sess_usercode');
             echo "<br>";
             echo  $sess_login=$this->session->userdata('sess_login');
+            //$this->user_model->checklogin($sess_login);
         }  
         public  function tbuser() //user สำหรับการ login เข้าใช้งาน
         {
